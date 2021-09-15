@@ -1,13 +1,16 @@
+spring:
+  application:
+    name: qlink-api
+
 qlink-api:
   config-server:
     address: localhost:8888
   db:
     address: localhost:5432
+
 server:
   port: 9080
   servlet:
     context-path: /q-link-api
-spring:
-  application:
-    name: qlink-api
+
 sleep: 0

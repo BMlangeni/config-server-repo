@@ -3,6 +3,7 @@ qlink-api:
     address: 35.240.37.186:8888
   db:
     address: 10.132.0.4:5432
+
 server:
   port: 8080
 sleep: 200
