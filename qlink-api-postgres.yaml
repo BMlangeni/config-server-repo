@@ -1,8 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://postgres:5432/postgres
-    username: postgres
+    url: jdbc:postgresql://${qlink-api.db.address}/postgres
     password: password
   jpa:
     database: postgresql
