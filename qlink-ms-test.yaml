@@ -1,0 +1,34 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: ${spring.embedded.kafka.brokers}
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer
+  cloud:
+    config:
+      enabled: false
+schema:
+  registry:
+    url: http://localhost:8081
+derive:
+  type: true
+
+global:
+  ws:
+    connectTimeout: 5000
+    readTimeout: 15000
+
+endpoint:
+  qlink: http://localhost:9080
+
+kafka:
+  retry-attempts: 5
+  topic-payment: payments
+  backoff-delay: 1000
+  multiplier: 2.0
