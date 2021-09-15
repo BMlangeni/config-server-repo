@@ -1,0 +1,5 @@
+kafka:
+  retry-attempts: 5
+  topic-collections: collections
+  backoff-delay: 1000
+  multiplier: 2.0
