@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://10.132.0.4:5432/postgres
+server:
+  port: 8080

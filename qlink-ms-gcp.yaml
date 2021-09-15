@@ -1,0 +1,16 @@
+spring:
+  kafka:
+    bootstrap-servers: 10.132.0.4:9092
+    consumer:
+      bootstrap-servers: 10.132.0.4:9092
+    producer:
+      bootstrap-servers: 10.132.0.4:9092
+
+schema:
+  registry:
+    url: http://10.132.0.4:8081
+
+endpoint:
+  qlink: http://10.132.0.3:8080
+server:
+  port: 8080

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: qlink-ms
+  kafka:
+    consumer:
+      bootstrap-servers: broker:29092
+      group-id: group_id
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializer
+    producer:
+      bootstrap-servers: broker:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer
+
+schema:
+  registry:
+    url: http://host.docker.internal:8081
+derive:
+  type: true
+
+global:
+  ws:
+    connectTimeout: 5000
+    readTimeout: 15000
+
+endpoint:
+  qlink: http://host.docker.internal:9080
+
+kafka:
+  retry-attempts: 5
+  topic-payment: payments
