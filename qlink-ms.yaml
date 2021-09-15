@@ -19,6 +19,10 @@ schema:
 derive:
   type: true
 
+qlink-ms:
+  config-server:
+    address: localhost:8888
+
 global:
   ws:
     connectTimeout: 5000
